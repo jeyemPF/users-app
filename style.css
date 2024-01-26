@@ -1,0 +1,174 @@
+body {
+    font-family: 'Arial', sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+    margin: 0;
+    padding: 0;
+    
+}
+body.dark-mode {
+    background-color: #312f3a;
+    color: #ccc; /* Default text color in dark mode */
+}
+body.dark-mode li:hover {
+    background-color: #fff; /* Set the background color to white in dark mode */
+    color: #312f3a; /* Set the text color to the dark mode text color */
+}
+
+
+body.dark-mode h1 {
+    color: #ccc; /* Text color for h1 in dark mode */
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+li {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    box-sizing: border-box;
+    transition: border-color 0.3s, transform 0.3s;
+    cursor: pointer;
+    overflow: hidden; /* Add this line to clip the content within the border */
+}
+
+
+h1 {
+    text-align: center;
+    color: #312f3a;
+    transition: color 0.5s;
+}
+
+.dark-mode {
+    background-color: #312f3a;
+    color: #ccc;
+}
+
+.btn-press {
+margin: 10px;
+padding: 10px 12px;
+border: 1px solid #ccc;
+border-radius: 1000%;
+cursor: pointer;
+transition: background-color 0.3s, ;
+
+}
+
+
+.btn-press:hover {
+    background-color: #312f3a;
+    color: #ccc;
+
+}
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+li:hover{
+    background-color: #312f3a;
+    color: #ccc;
+
+}
+
+@media screen and (max-width: 1000px) {
+    li {
+        width: calc(100% - 30px);
+    }
+}
+
+/* Add this to your existing CSS */
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 250px;
+    margin-right: 10px;
+    box-sizing: border-box;
+}
+body.dark-mode #searchInput {
+    background-color: #312f3a; /* Adjust the background color for dark mode */
+    color: #ccc; /* Adjust the text color for dark mode */
+    border-color: #555; /* Adjust the border color for dark mode */
+}
+
+.user-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+
+    border-radius: 8px;
+    margin: 20px 0;
+
+}
+
+.user-form h2 {
+    color: #ccc;
+}
+
+.user-form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #312f3a;
+}
+
+.user-form input {
+    padding: 8px;
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.user-form button {
+    padding: 5px 9px;
+    background-color:  #312f3a;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.user-form button:hover {
+    background-color: #ccc;
+}
+.dark-mode .user-form input {
+    border-color: #ccc; /* Dark mode border color */
+    background-color: #312f3a; /* Dark mode background color */
+    color: #ccc; 
+}
+
+.dark-mode .user-form label {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #ccc;
+}
+.dark-mode .user-form button{
+    border-color: #312f3a; /* Dark mode border color */
+    background-color: #ccc;  /* Dark mode background color */
+    color: #312f3a;
+}

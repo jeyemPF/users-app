@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-content">
+        
+        <h1>Users</h1>
+        <div class="btn">
+            <div class="btn-press" onclick="toggleDarkMode()">
+                <i id="darkModeIcon" class="far fa-moon"></i>
+            </div>
+        </div>
+        
+       <!-- Add this within your <div class="main-content"> -->
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by name...">
+        </div>
+
+  
+            <ul></ul>
+          
+
+        <!-- form -->
+        <div class="user-form" >
+            <h1>+Add user</h1>
+            <form id="userForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <!-- Add this within your <form id="userForm"> ... </form> -->
+                <label for="street">Street:</label>
+                <input type="text" id="street" name="street" required>
+
+                <label for="suite">Suite:</label>
+                <input type="text" id="suite" name="suite" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="zipcode">Zip Code:</label>
+                <input type="text" id="zipcode" name="zipcode" required>
+
+                
+                <!-- Add additional fields for other user information if needed -->
+        
+                <button type="button" onclick="addUser()">Add User</button>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
