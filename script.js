@@ -3,26 +3,28 @@ fetch('https://jsonplaceholder.typicode.com/users')
     .then(data => {
         const userList = document.querySelector('ul');
 
-     // Update the part where the user image is added to each list item
-data.forEach(user => {
-    const address = user.address;
-    const markup = `
-        <li>
-            <div class="user-info">
-                <strong>${user.name}</strong><br>
-                Email: ${user.email}<br>
-                Address: ${address.street}, ${address.suite}, ${address.city}, ${address.zipcode}<br>
-            </div>
-            <div class="user-image-container">
-                <img src="https://placekitten.com/200/200" alt="User Image" style="border-radius: 100%; width: 50px; height: 50px">
-            </div>
-        </li>`;
-    userList.insertAdjacentHTML('beforeend', markup);
-});
+        // Update the part where the user image is added to each list item
+        data.forEach(user => {
+            const address = user.address;
+            
+            // Generate a random number for the placeholder image
+            const randomImageId = Math.floor(Math.random() * 1000);
 
+            const markup = `
+                <li>
+                    <div class="user-info">
+                        <strong>${user.name}</strong><br>
+                        Email: ${user.email}<br>
+                        Address: ${address.street}, ${address.suite}, ${address.city}, ${address.zipcode}<br>
+                    </div>
+                    <div class="user-image-container">
+                        <img src="https://picsum.photos/200/200?random=${randomImageId}" alt="User Image" style="border-radius: 100%; width: 50px; height: 50px">
+                    </div>
+                </li>`;
+            userList.insertAdjacentHTML('beforeend', markup);
+        });
     })
     .catch(error => console.log(error));
-
     function toggleDarkMode() {
         document.body.classList.toggle("dark-mode");
         const icon = document.getElementById("darkModeIcon");
